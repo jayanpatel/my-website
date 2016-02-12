@@ -1,40 +1,36 @@
-$(document).ready(function() {
-  $('#fullpage').fullpage({
-  	// anchors: ['Home', 'About', 'Projects', 'Contact'],
-  	// verticalCentered: false,
+// console.log("works");
+// $(document).ready(function(){
 
-  	// //Navigation
-    navigation: false,
-    navigationPosition: 'right',
-    slidesNavigation: true,
-    slidesNavPosition: 'bottom',
+// });
 
-   //  //Scrolling
-    css3: true,
-    scrollingSpeed: 1200,
-    autoScrolling: true,
-    scrollBar: true,
-
-   //  //Accessibility
-    keyboardScrolling: true,
-    animateAnchor: true,
-
-   //  //Design
-    controlArrows: true,
-    verticalCentered: false,
-    resize: true,
-
-   //  //Custom selectors
-    sectionSelector: '.section',
-    slideSelector: '.slide',
-
+carousel = (function(){
+  var box = document.querySelector('.carouselbox');
+  var next = box.querySelector('.next');
+  var prev = box.querySelector('.prev');
+  var items = box.querySelectorAll('.content li');
+  var counter = 0;
+  var amount = items.length;
+  var current = items[0];
+  box.classList.add('active');
+  function navigate(direction) {
+    current.classList.remove('current');
+    counter = counter + direction;
+    if (direction === -1 && 
+        counter < 0) { 
+      counter = amount - 1; 
+    }
+    if (direction === 1 && 
+        !items[counter]) { 
+      counter = 0;
+    }
+    current = items[counter];
+    current.classList.add('current');
+  }
+  next.addEventListener('click', function(ev) {
+    navigate(1);
   });
-
-
-  $('#header').hide();   
-  $(window).scroll(function(){
-    $('#header').fadeIn(2000);
-  })
-
-
-});
+  prev.addEventListener('click', function(ev) {
+    navigate(-1);
+  });
+  navigate(0);
+})();

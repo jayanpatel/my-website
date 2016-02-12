@@ -10,14 +10,7 @@
 	<link href="https://ga-core-production-herokuapp-com.global.ssl.fastly.net/assets/public/homepage-headers-4521e0c7de57953337f283b862746c36.css" media="screen" rel="stylesheet">
 	<link href="https://ga-navi-production-herokuapp-com.global.ssl.fastly.net/assets/application-b29e4d18ebcce803396cceec0c7ac2967be6bd5567a0591a1b8a6958c9a6fc17.css" media="screen" rel="stylesheet">
 
-	<link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<script src="vendors/jquery.easings.min.js"></script> 
-	<script type="text/javascript" src="vendors/jquery.slimscroll.min.js"></script>
-
-	<script type="text/javascript" src="jquery.fullPage.js"></script>
-	<script type="text/javascript" src='app.js'></script>
 
 	<!-- <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
 	<link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
@@ -35,7 +28,7 @@
 
 </head>
 <body>
-	<div id="fullpage">
+	
 	<section style="background-image: url(http://i.imgur.com/iRTbhna.jpg); background-repeat: no-repeat; background-size: cover; height: 100%;">
 	
 	<header class="huge-header max90 has-grid-padding">
@@ -60,7 +53,7 @@
 	<li><a class="sub-navigation__link" href="#about-me" style="background-color: rgba(34,34,34,0.95);">About Me</a></li>
 	<li><a class="sub-navigation__link" href="#skills" style="background-color: rgba(34,34,34,0.95);">Skills</a></li>
 	<li><a class="sub-navigation__link" href="#projects" style="background-color: rgba(34,34,34,0.95);">Projects</a></li>
-	<li><a class="sub-navigation__link" href="#contact-me" style="background-color: rgba(34,34,34,0.95);">Personal Information</a></li>
+	<li><a class="sub-navigation__link" href="#personal-information" style="background-color: rgba(34,34,34,0.95);">Personal Information</a></li>
 
 	<li class="sub-navigation__talk-to-us">
 	<a class="talk-to-us-link" href="tel:+17143052268">
@@ -76,7 +69,7 @@
 	</a>
 	</section>
 
-	<section class="content-area-blue content-area-reduce-top-padding-mobile js-sub-navigation-waypoint" id="about-me" style="padding-bottom: 150px; padding-top: 100px;">
+	<section class="content-area-blue content-area-reduce-top-padding-mobile js-sub-navigation-waypoint" id="about-me" style="padding-bottom: 150px; padding-top: 100px; background-color: #ea2e31;">
 	<div class="complex-grid with-padding small-web-full">
 	<div class="col3 tablet-collapsible"></div>
 	<div class="col9">
@@ -118,7 +111,7 @@
 	</div>
 	</section> <!-- end of about me section -->
 
-	<section class="content-area-white js-sub-navigation-waypoint" id="skills" style="background-color: #ea2e31; color: white;">
+	<section class="content-area-blue js-sub-navigation-waypoint" id="skills" style="color: white;">
 	<div class="complex-grid small-web-full">
 	<div class="col3 tablet-collapsible"></div>
 	<div class="col9" itemprop="performers" itemscope="" itemtype="http://schema.org/Person"><div class="complex-grid with-padding">
@@ -296,37 +289,181 @@
 	</div>
 	</div>
 	</div>
-	</section>
+	</section> <!-- end of skills section -->
 
-	<section class="content-area-white js-sub-navigation-waypoint" id="projects">
+	
+	<section class="content-area-grey-light js-sub-navigation-waypoint" id="projects" style="background: white;">
+	<div id="fullpage">
 	<div class="complex-grid with-padding small-web-full">
 	<div class="col3 tablet-collapsible"></div>
 	<div class="col9"><div class="complex-grid with-padding">
-	<header class="col12">
+	<header class="col12" style="padding-bottom: 25px;">
 	<h2>Projects</h2>
 	</header>
 
+
 	<div class="col12">
-	<section class="panel-grey-light immersive-student-story centered section">
-	<div class="slide">
-	<h4>Former Digital Producer</h4>
-	<h5>Charlie Gerard</h5>
-	<img alt="Charlie Gerard, Software Developer" src="https://ga-core-production-herokuapp-com.global.ssl.fastly.net/assets/controllers/education/immersives/web-development-immersive/charlie-wdi-alumni-98ae3de5ed326cce3a81507cfa78fd63.png">
-	<div class="badge centered">
-	<div class="line"></div>
-	<p>WDI</p>
+	<section class="panel-grey-light immersive-student-story centered outer" style="background: white; color: #222;">
+	<div class="carouselbox">
+	  <div class="buttons">
+	    <button class="prev">
+	      < <span class="offscreen">Previous</span>
+	    </button>
+	    <button class="next">
+	      <span class="offscreen">Next</span> > 
+	    </button>
+	  </div>
+	  <ol class="content">
+	    <li>
+	    	<div class='section-title' id='project-title' style="font-family: Circular,Helvetica,sans-serif;"> 
+    			<a href="http://www.sequencepad.com" target='_blank'>Craigslunch</a>
+    		</div>
+
+    		<a href="http://www.sequencepad.com" target='_blank'><img id='project-img' src="http://bit.ly/1XlFW7v" style="width: 100%; height: 65%; margin-top: 20px; margin-bottom: 10px; border: 1px solid #222; box-shadow: 2px 2px 10px #222;" align="middle"></a>
+
+    		<div style="color: #222;">
+    		<p id='description' style="font-family: Circular,Helvetica,sans-serif;">
+    			Craigslunch is an application that brings order, efficiency, and community to lunch. CraigsLunch is simply the easiest way to coordinate the who, what, where of lunch. A, logged in, user can decide whether they want to order a pick-up or a deliver or join their colleauges or go alone to their own choice of restaurants near them.
+    		</p>
+			<p id='tech' style="font-family: Circular,Helvetica,sans-serif;">Technologies: JavaScript, JQuery, Google Maps API MongoDB, Express, Handlebars.js, Node.js, Yelp API, MD5 Hash, HTML5, CSS3, Normalize.css, and Skeleton.css<br> 
+			<a href="https://github.com/mollykennan/projectThree/tree/master/lunchapp" target='_blank'>Source Code</a> | <a href="http://www.sequencepad.com" target='_blank'>Link</a> 
+			</p>
+			</div>
+	    </li>
+	    <li>
+	    	<div class='section-title' style="font-family: Circular,Helvetica,sans-serif;"> 
+    			<a href="http://www.sequencepad.com" target='_blank'>Photo-Sharing App</a>
+    		</div>
+
+    		<a href="http://www.sequencepad.com" target='_blank'><img id='project-img' src="images/photo-sharing-app.jpg" style="width: 100%; height: 70%; margin-top: 20px; margin-bottom: 10px; border: 1px solid #222; box-shadow: 2px 2px 10px #222;"></a>
+
+    		<div style="color: #222;">
+    		<p id='description' style="font-family: Circular,Helvetica,sans-serif;">
+    			Photo-Sharing App is a social media web application. With this application, users can share their images with others. While a user is logged in, they can also like and comment on the images.
+    		</p>
+			<p id='tech' style="font-family: Circular,Helvetica,sans-serif;">Technologies: Ruby, Ruby on Rails, PostgreSQL, Paperclip gem, Devise gem, Skeleton.css, HTML5, CSS3, Normalize.css, and ERB Templating.<br> 
+			<a href="https://github.com/jayanpatel/photo_sharing_app/tree/master/photo_app" target='_blank'>Source Code</a> | <a href="http://www.sequencepad.com" target='_blank'>Link</a> 
+			</p>
+			</div>
+	    </li>
+	    <li>
+	    	<div class='section-title' id='project-title' style="font-family: Circular,Helvetica,sans-serif;"> 
+    			<a href="http://www.sequencepad.com" target='_blank'>Blackjack</a>
+    		</div>
+
+    		<a href="http://www.sequencepad.com" target='_blank'><img id='project-img' src="images/blackjack.jpg" style="width: 100%; height: 70%; margin-top: 20px; margin-bottom: 10px; border: 1px solid #222; box-shadow: 2px 2px 10px #222;"></a>
+
+    		<div style="color: #222;">
+    		<p id='description' style="font-family: Circular,Helvetica,sans-serif;">
+    			Blackjack is an interactive digital version of the renowned card game. This was the first application that I built in my class. With this application users can play against a dealer with basic functions such as hit and stand, more features are yet to be added.
+    		</p>
+			<p id='tech' style="font-family: Circular,Helvetica,sans-serif;">Technologies: JavaScript, HTML5, and CSS3. <br> 
+			<a href="https://github.com/jayanpatel/blackjack" target='_blank'>Source Code</a> | <a href="http://www.sequencepad.com" target='_blank'>Link</a> 
+			</p>
+			</div>
+	    </li>
+	  </ol>
 	</div>
-	<h4>Software Developer, ThoughtWorks</h4>
-	<p>“Once I realized I had a passion for programming, WDI seemed like the perfect balance between trying to teach myself and going back to university. The curriculum and instructors were amazing and helped me gain the skills I needed to bring my ideas to life through code.”</p>
+	</section>
+	</div>
+
+	</div>
+	</div>
+	</div>
+	</section> <!-- end of projects section -->
+
+	<section class="content-area-white js-sub-navigation-waypoint" id="personal-information" style="background-color: #00f786; color: white; position: relative;">
+	<div class="complex-grid small-web-full">
+	<div class="col3 tablet-collapsible"></div>
+	<div class="col9" itemprop="performers" itemscope="" itemtype="http://schema.org/Person">
+	<div class="complex-grid with-padding">
+	<header class="col12">
+	<h2>Personal Information</h2>
+	<p class="resizable medium">Hover over the images for links</p>
+	</header>
+	</div>
+	<div class="complex-grid with-padding">
+	<div class="col-4-6 pdp-instructors" style="margin-bottom: 50px;">
+	<div class="instructor-profile-preview">
+	<div class="image-wrapper">
+	<img alt="jayanypatel@gmail.com" src="http://bit.ly/1Tfoh2j" style="width: 220px; height: 200px; border: 2px solid #222;">
+	<div class="instuctor-metro">
+	<p class="city" style="background-color: green;">jayanypatel@gmail.com</p>
+	</div>
+	</div>
+	</div>
+	</div>
+
+	<div class="col-4-6 pdp-instructors" style="margin-bottom: 50px;">
+	<div class="instructor-profile-preview">
+	<div class="image-wrapper">
+	<img alt="https://github.com/jayanpatel" src="http://bit.ly/1CCy7nP" style="width: 220px; height: 200px; border: 2px solid #222;">
+	<div class="instuctor-metro">
+	<a class="city" href="https://github.com/jayanpatel" target='_blank' style="background-color: green;">GitHub</a>
+	</div>
+	</div>
+	</div>
+	</div>
+
+	<div class="col-4-6 pdp-instructors" style="margin-bottom: 50px;">
+	<div class="instructor-profile-preview">
+	<div class="image-wrapper">
+	<img alt="https://www.linkedin.com/in/jayanp" src="http://bit.ly/1Ruly3R" style="width: 220px; height: 200px; border: 2px solid #222; background-color: white;">
+	<div class="instuctor-metro">
+	<a class="city" href="https://www.linkedin.com/in/jayanp" target='_blank' style="background-color: green;">LinkedIn</a>
+	</div>
+	</div>
+	</div>
+	</div>
 	
+	<div class="col-4-6 pdp-instructors" style="margin-bottom: 50px;">
+	<div class="instructor-profile-preview">
+	<div class="image-wrapper">
+	<img alt="https://www.facebook.com/jayanypatel" src="http://bit.ly/1LjSSnr" style="width: 220px; height: 200px; border: 2px solid #222; background-color: white;">
+	<div class="instuctor-metro">
+	<a class="city" href="https://www.facebook.com/jayanypatel" target='_blank' style="background-color: green;">Facebook</a>
 	</div>
-	</section>
 	</div>
+	</div>
+	</div>
+
+	<!-- <div class="col-4-6 pdp-instructors" style="margin-bottom: 15px;">
+	<div class="instructor-profile-preview">
+	<div class="image-wrapper">
+	<img alt="Jayan Patel's resume" src="http://bit.ly/1Skv0I9" style="width: 220px; height: 200px; border: 2px solid #222; background-color: white;">
+	<div class="instuctor-metro">
+	<a href="Jayan-Patel-resume.pdf" style="background-color: green;" target='_blank'>Resume</a>
+	</div>
+	</div>
+	</div>
+	</div> -->
+
+	<div class="col-4-6 pdp-instructors" style="margin-bottom: 15px;">
+	<div class="instructor-profile-preview">
+	<div class="image-wrapper">
+	<img alt="Jayan Patel's resume" src="http://bit.ly/1o4gM18" style="width: 220px; height: 200px; border: 2px solid #222; background-color: white;">
+	<div class="instuctor-metro">
+	<a href="Jayan-Patel-resume.pdf" style="background-color: green;" target='_blank'>Resume</a>
+	</div>
+	</div>
+	</div>
+	</div>
+
 
 	</div>
 	</div>
-	</section>
-
 	</div>
+	<footer style="padding-top: 14vh; clear: both; font-size: 10px; text-align: center;">
+		<br> Website by Jayan Patel | General Assembly &copy; 2016<br> 
+		<a href="https://github.com/SamMatthews9"> GitHub </a> | 
+		<a href="https://www.linkedin.com/in/samwmatthews"> LinkedIn</a> | 
+		<a href="mailto:sammatthews9@gmail.com"> Email</a> <br>
+	</footer>
+	</section>
+	
+	
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+	<script type="text/javascript" src='app.js'></script>
 </body>
 </html>
